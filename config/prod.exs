@@ -59,4 +59,16 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
+
+
+config :instagram_phoenix_example, InstagramPhoenixExample.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+# Configure your database
+config :instagram_phoenix_example, InstagramPhoenixExample.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: System.get_env("DATABASE_URL"),
+  pool_size: 20
