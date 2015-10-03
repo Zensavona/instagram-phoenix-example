@@ -1,0 +1,31 @@
+{
+  "name": "Elixtagram example",
+  "description": "Example Instagram app with Elixtagram and Phoenix",
+  "keywords": [
+    "elixir",
+    "instagram",
+    "phoenix"
+  ],
+  "website": "https://github.com/zensavona/elixtagram/",
+  "repository": "https://github.com/zensavona/phoenix-instagram-example",
+  "success_url": "/",
+  "env": {
+    "INSTAGRAM_CLIENT_ID": {
+      "description": "Your Instagram API client id."
+    },
+    "INSTAGRAM_CLIENT_SECRET": {
+      "description": "Your Instagram API client secret."
+    },
+    "INSTAGRAM_REDIRECT_URI": {
+      "description": "https://your-app-name.herokuapp.com/callback"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "Phoenix app secret key base",
+      "generator": "secret"
+    }
+  },
+  "buildpacks": [
+    { "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git" },
+    { "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git" }
+  ]
+}
