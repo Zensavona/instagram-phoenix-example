@@ -1,36 +1,31 @@
 <div class="jumbotron">
-  <h2>Welcome to Phoenix!</h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
+  <h2><a href="https://github.com/zensavona/elixtagram">Elixtagram</a> is a nice thing!</h2>
+  <p class="lead">Use it to authenticate your users with Instagram.</p>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="http://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
+  <ol class="breadcrumb">
+    <li><a href="https://github.com/zensavona/extagram">GitHub</a></li>
+    <li><a href="https://hex.pm/packages/elixtagram">Hex</a></li>
+    <li><a href="https://hexdocs.pm/elixtagram">API Docs</a></li>
+  </ol>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
+  <%= unless @data.is_authenticated do %>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <a href="<%= @data.url %>" class="btn btn-block btn-primary">
+          <i class="fa fa-instagram"></i> Sign in with Instagram
+        </a>
+      </div>
+    </div>
+  <% end %>
 </div>
+<%= if @data.is_authenticated do %>
+  <center>
+    <h1><a target="_blank" href="https://instagram.com/<%= @data.user.username %>">@<%= @data.user.username %></a>'s recent media</h1>
+    <hr />
+    <%= for picture <- @data.media do %>
+      <a target= "_blank" href="<%= picture.link %>">
+        <img class="img-rounded" alt="Photo" src="<%= picture.images.low_resolution.url %>" style="width: 140px; height: 140px; margin: 10px">
+      </a>
+    <% end %>
+  </center>
+<% end %>
