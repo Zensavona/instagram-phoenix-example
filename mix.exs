@@ -18,9 +18,13 @@ defmodule InstagramPhoenixExample.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {InstagramPhoenixExample, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex]]
+     applications: app_list(Mix.env)]
   end
+
+  defp app_list(:dev), do: [:dotenv | app_list]
+  defp app_list(_), do: app_list
+  defp app_list, do: [:phoenix, :phoenix_html, :cowboy, :logger,
+                 :phoenix_ecto, :postgrex]
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
