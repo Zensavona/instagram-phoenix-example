@@ -1,6 +1,7 @@
 # Elixtagram Phoenix Example
 
-### Try the [Live Demo](https://instagram-phoenix-example.herokuapp.com/) or ![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+### [Live Demo](https://instagram-phoenix-example.herokuapp.com/) or [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 This is a simple example demoing Instagram login and API usage with [Phoenix](http://phoenixframework.org) and the [Elixtagram](https://github.com/zensavona/elixtagram) library
 
 ### Try it Out
