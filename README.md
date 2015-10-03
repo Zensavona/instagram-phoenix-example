@@ -1,6 +1,6 @@
 # Elixtagram Phoenix Example
 
-### [Live Demo](https://)
+### Try the [Live Demo](https://instagram-phoenix-example.herokuapp.com/) or ![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 This is a simple example demoing Instagram login and API usage with [Phoenix](http://phoenixframework.org) and the [Elixtagram](https://github.com/zensavona/elixtagram) library
 
 ### Try it Out
@@ -19,4 +19,4 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 On Heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Click the button at the top of the page ;)
