@@ -1,19 +1,22 @@
-# InstagramPhoenixExample
+# Elixtagram Phoenix Example
 
-To start your Phoenix app:
+### [Live Demo](https://)
+This is a simple example demoing Instagram login and API usage with [Phoenix](http://phoenixframework.org) and the [Elixtagram](https://github.com/zensavona/elixtagram) library
 
-  1. Install dependencies with `mix deps.get`
-  2. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  3. Start Phoenix endpoint with `mix phoenix.server`
+### Try it Out
+
+Locally:
+
+  1. Create a `.env` file and assign `INSTAGRAM_CLIENT_ID`, `INSTAGRAM_CLIENT_SECRET` and `INSTAGRAM_REDIRECT_URI=http://localhost:4000/callback`.
+  2. Run these commands
+
+````
+mix deps.get
+mix.phoenix.server
+````
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+On Heroku:
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: http://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
